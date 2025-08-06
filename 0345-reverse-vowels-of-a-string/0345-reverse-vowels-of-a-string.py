@@ -3,7 +3,8 @@ class Solution:
         s =list(s)
         left=0
         right = len(s)-1
-        vowels = ["a","e","i","o","u","A","E","I","O","U"]
+        vowels =  set("aeiouAEIOU")
+
 
         while left<right:
             if s[left] in  vowels:
