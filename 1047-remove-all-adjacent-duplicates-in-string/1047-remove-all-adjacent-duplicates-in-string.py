@@ -3,9 +3,9 @@ class Solution:
         stack = []
         for ch in s:
             if stack and stack[-1] == ch:
-                stack.pop()  # Remove the duplicate
+                stack.pop() 
             else:
-                stack.append(ch)  # Add the new character
+                stack.append(ch)
         return "".join(stack)
 
         
