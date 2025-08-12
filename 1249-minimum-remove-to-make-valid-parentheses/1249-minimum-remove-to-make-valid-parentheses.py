@@ -5,17 +5,15 @@ class Solution:
 
         for i, ch in enumerate(s):
             if ch == '(':
-                stack.append(i)  # store index of '('
+                stack.append(i)  
             elif ch == ')':
                 if stack:
-                    stack.pop()  # match with '('
+                    stack.pop()  
                 else:
-                    remove_indices.add(i)  # unmatched ')'
-
-        # Add remaining '(' in stack to removal list
+                    remove_indices.add(i)  
         remove_indices.update(stack)
 
-        # Build the final string without removed indices
+
         result = []
         for i, ch in enumerate(s):
             if i not in remove_indices:
